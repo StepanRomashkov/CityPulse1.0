@@ -277,21 +277,21 @@ table, th, td {
 				zoom : ${zoom}
 			});
 			
-		      var myLocation = pyrmont; //Sets variable to geo location long and lat co-ordinates.
-				var myPosition = new google.maps.Marker({
-					position : myLocation,
-					icon : {
-						path : google.maps.SymbolPath.CIRCLE,
-						scale : 5
-					},
-					draggable : true,
-					map : map,
-					title: "You are here"
-				});
+// 		      var myLocation = pyrmont; //Sets variable to geo location long and lat co-ordinates.
+// 				var myPosition = new google.maps.Marker({
+// 					position : myLocation,
+// 					icon : {
+// 						path : google.maps.SymbolPath.CIRCLE,
+// 						scale : 5
+// 					},
+// 					draggable : true,
+// 					map : map,
+// 					title: "You are here"
+// 				});
 		      
-				var infoWindowLoc = new google.maps.InfoWindow({map: map});
-				infoWindowLoc.setPosition(pyrmont);
-				infoWindowLoc.setContent('You are here');
+// 				var infoWindowLoc = new google.maps.InfoWindow({map: map});
+// 				infoWindowLoc.setPosition(pyrmont);
+// 				infoWindowLoc.setContent('You are here');
 			
 			infowindow = new google.maps.InfoWindow();
 			var service = new google.maps.places.PlacesService(map);
