@@ -34,8 +34,9 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home (@RequestParam("lat") Double lat,
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	public String home (
+				@RequestParam("lat") Double lat,
 				@RequestParam("lng") Double lng,
 				@RequestParam("zoom") Integer zoom,
 				@RequestParam("userId") long userId,

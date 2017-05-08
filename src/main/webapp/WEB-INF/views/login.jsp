@@ -50,7 +50,8 @@ function setCenterMap(geocoder, resultsMap) {
 <body>
 <div class = "container">
 <!-- <div class="topHeader" style="width:100%">
-<img src = "./resources/images/pulselogo.png" style="margin: 0% auto"> -->/
+<img src = "./resources/images/pulselogo.png" style="margin: 0% auto"> 
+-->
 <br></br>
 <br></br>
 <h1>city<span style="color:red">PULSE</span></h1>
