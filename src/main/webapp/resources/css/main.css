@@ -4,7 +4,7 @@
 
 #map {
 position: absolute;
-height: 80vh;
+height: 50vh;
 width: 65vw;
 margin-left: auto;
 margin-right: auto;
@@ -58,7 +58,6 @@ position: relative;
 right: 0;
 margin: 0;
 }
-
 
 /* #saveUserForm, #welcomeMessage {
 display: inline-block;

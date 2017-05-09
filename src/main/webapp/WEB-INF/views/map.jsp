@@ -9,34 +9,9 @@
 
 <html>
 
-
 <!-- STYLE BRACKETS WERE HERE -->
 
 <style>
-/*  html, body {
-	height: 100%;
-	margin: 0;
-	padding: 0;  */
-/* }
-
- #map {
-	top: 10px;
-	left: 10px;
-	height: 97%;
-	width: 1000px;
-}  */
-
-.voteForm {
-display: inline-block;
-float: right;
-width: 25%;
-padding: 13px;
-color: #ffffff;
-	/* position: absolute;
-	top: 280px;
-	left: 1030px;
-	width: 310px; */
-}
 
 #barInfo {
 	position: absolute;
@@ -45,39 +20,44 @@ color: #ffffff;
 	width: 310px;
 }
 
-
 #container {
-width: 960px; 
-max-width: 90%;
-position: relative;
-left: 50%;
-margin-left: -480px;
-line-height: 1.4em;
+	width: 960px; 
+	max-width: 90%;
+	position: relative;
+	left: 50%;
+	margin-left: -480px;
+	line-height: 1.4em;
 }
 
-
-
 #map {
-position: absolute;
-height: 80vh;
-width: 65vw;
-margin-left: auto;
-margin-right: auto;
-z-index: -1;
-right: 400px; 
+	position: absolute;
+	height: 50vh;
+	width: 65vw;
+/* 	
+	margin-left: auto;
+	margin-right: auto;
+*/
+	z-index: -1;
+	right: 400px; 
+}
+
+#placeName {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
 }
 
 /*  ADD BUTTON HERE*/
- button {
-/* border-radius: 5px;
-border: none;
-background-color: #3A3A3A;
-margin: 0 4px 10px 8px;
-height: 40px;
-width: 50px;
-box-shadow: 0px 3px 0px 0px #222121; */
-
-background-color: #ff0000; /* Green */
+button {
+	border-radius: 5px;
+	border: none;
+	background-color: #3A3A3A;
+	margin: 0 4px 10px 8px;
+	height: 40px;
+	width: 85px;
+	box-shadow: 0px 3px 0px 0px #222121;
+	
+	background-color: #ff0000; /* Green */
     border: none;
     color: white;
     padding: 5px 10px;
@@ -86,47 +66,39 @@ background-color: #ff0000; /* Green */
     display: inline-block;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
-
 }
- 
 
-
-/* 
-#map {
-	position: absolute;
-	top: 10px;
-	left: 300px;
-	width: 1000px;
-	height: 1000px;
-} */
-
- h1 {
-text-align: center;
-font-weight: 700;
-text-transform: uppercase;
-margin-top: 0;
-margin-bottom: 0;
-font-size: 80px;
-color: #ffffff;
+h1 {
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 80px;
+	color: #ffffff;
 }
 
 
 h2 {
-font-weight: 300;
-text-align: center;
-font-size: 50px;
-margin-bottom: 70px;
-color: #ffffff;
+	font-weight: 300;
+	text-align: center;
+	font-size: 50px;
+	margin-bottom: 70px;
+	color: #ffffff;
 }
 
 body {
-font-family: 'Raleway', sans-serif;
-font-weight: 200;
-color: #222;
-background-color: #37474F;
-position: relative;
-right: 0;
-margin: 0;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	color: #222;
+	background-color: #37474F;
+	position: relative;
+	right: 0;
+	margin: 0;
+}
+
+p {
+	font-weight: bold;
 }
 
 label {
@@ -140,6 +112,14 @@ table, th, td {
 
 .submit {
 	margin: 10px 0;
+}
+
+.voteForm {
+	display: inline-block;
+	float: right;
+	width: 25%;
+	padding: 13px;
+	color: #ffffff;
 }
 
 </style>
@@ -214,8 +194,8 @@ table, th, td {
 		<input type="text" id="currentUser" name="userId" hidden="true">
 		<input type="text" id="currentPlace" name="placeId" hidden="true">
 		<br></br>
-		<label>What's your overall feeling about this place?<br>
-		<br></br>
+		<label><p>What's your overall feeling about this place?</p>
+		<br>
 			<input type="radio" name="overallRate" value="dead"> Dead<br>
 			<input type="radio" name="overallRate" value="justRight" checked>
 			Just Right<br> <input type="radio" name="overallRate"
@@ -277,21 +257,21 @@ table, th, td {
 				zoom : ${zoom}
 			});
 			
-		      var myLocation = pyrmont; //Sets variable to geo location long and lat co-ordinates.
-				var myPosition = new google.maps.Marker({
-					position : myLocation,
-					icon : {
-						path : google.maps.SymbolPath.CIRCLE,
-						scale : 5
-					},
-					draggable : true,
-					map : map,
-					title: "You are here"
-				});
+// 		      var myLocation = pyrmont; //Sets variable to geo location long and lat co-ordinates.
+// 				var myPosition = new google.maps.Marker({
+// 					position : myLocation,
+// 					icon : {
+// 						path : google.maps.SymbolPath.CIRCLE,
+// 						scale : 5
+// 					},
+// 					draggable : true,
+// 					map : map,
+// 					title: "You are here"
+// 				});
 		      
-				var infoWindowLoc = new google.maps.InfoWindow({map: map});
-				infoWindowLoc.setPosition(pyrmont);
-				infoWindowLoc.setContent('You are here');
+// 				var infoWindowLoc = new google.maps.InfoWindow({map: map});
+// 				infoWindowLoc.setPosition(pyrmont);
+// 				infoWindowLoc.setContent('You are here');
 			
 			infowindow = new google.maps.InfoWindow();
 			var service = new google.maps.places.PlacesService(map);
@@ -370,9 +350,10 @@ table, th, td {
 				marker.setIcon(pinImageJ);
 				marker.setAnimation(google.maps.Animation.BOUNCE);			}
 //console.log(dataRating);
-			var infoContent = place.name + "<br>" 
-					+ "Rating of this place:<br>"
-					+ "Dead: " + deadRate + "  Just Right: " + justRightRate + "  Jumping Jumping!: " + jumpingRate + "<br>"
+			var infoContent = 
+					"<p>" + place.name + "</p>" 
+					+ "Rating of this place:<br><br>"
+					+ "Dead: " + deadRate + " | Just Right: " + justRightRate + " | Jumping Jumping!: " + jumpingRate + "<br><br>"
 					+ "Has cover charge: " + coverChargeRate + "<br>"
 					+ "Too many dudes!: " + crowdedRate + "<br>"
 					+ "Prices are way too high!: " + expensiveRate + "<br>"

@@ -9,10 +9,15 @@
 
         <!-- Database connection settings -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+<!--
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/citypulsedb?useTimezone=true&amp;serverTimezone=UTC</property>
         <property name="hibernate.connection.username">jdbc</property>
         <property name="hibernate.connection.password">admin</property>
-
+-->
+        <property name="hibernate.connection.url">jdbc:mysql://citypulsedb.ci9kq4cxpttn.us-east-2.rds.amazonaws.com:3306/akumadb?useTimezone=true&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">jdbc</property>
+        <property name="hibernate.connection.password">heresmIghtY8AdmiN</property>
 
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
