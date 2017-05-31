@@ -15,12 +15,20 @@
         <property name="hibernate.connection.username">jdbc</property>
         <property name="hibernate.connection.password">admin</property>
 -->
-        <property name="hibernate.connection.url">jdbc:mysql://citypulsedb.ci9kq4cxpttn.us-east-2.rds.amazonaws.com:3306/akumadb?useTimezone=true&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.url">jdbc:mysql://citypulsedb.ci9kq4cxpttn.us-east-2.rds.amazonaws.com:3306/akumadb</property>
         <property name="hibernate.connection.username">jdbc</property>
-        <property name="hibernate.connection.password">heresmIghtY8AdmiN</property>
+        <property name="hibernate.connection.password">heresmIghtY8AdmiN</property>        
 
         <!-- SQL dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <!-- Connection pooling -->
+        <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">5</property>
+		<property name="hibernate.c3p0.timeout">120</property>
+		<property name="hibernate.c3p0.max_statements">10</property>
+        
         <!-- Specify session context -->
         <property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
 	

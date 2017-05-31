@@ -20,7 +20,7 @@ public class RatingsDAO {
 	
 	private static void setupFactory() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (Exception e) {
 			;//this is silliness!
 		}

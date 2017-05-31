@@ -117,8 +117,7 @@ table, th, td {
 .voteForm {
 	display: inline-block;
 	float: right;
-	width: 25%;
-	padding: 13px;
+	padding-right: 40px;
 	color: #ffffff;
 }
 
@@ -164,12 +163,13 @@ table, th, td {
 </script>
 
 
-<div class="col-md-4"> </div>
 <div class="col-md-4"> 
-
 	<div id="map" class= "img-responsive">
 		<!-- Replace the value of the key parameter with your own API key. -->
 	</div>
+</div>
+<div class="col-md-4">
+ 
 </div>
 	<div id="barInfo">
 	
@@ -280,7 +280,7 @@ table, th, td {
 				radius : 3000,
 				type : [ 'bar' ]
 			}, callback);
-		}
+		};
 
 		function callback(results, status) {
 			if (status === google.maps.places.PlacesServiceStatus.OK) {

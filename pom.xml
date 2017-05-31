@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jkmsteam</groupId>
 	<packaging>war</packaging>
-	<version>0.3</version>
+	<version>0.3.1</version>
 	<properties>
 		<java-version>1.6</java-version>
 		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
@@ -139,6 +139,11 @@
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
 			<version>0.32</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>5.2.10.Final</version>
 		</dependency>
 	</dependencies>
     <build>
